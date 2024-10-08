@@ -6,19 +6,8 @@
     <title>Access Control</title>
     <script>
         function checkAccess() {
-            // Get the query parameters from the URL
-            const params = new URLSearchParams(window.location.search);
-            const variable = params.get('variable'); // Get the 'variable' parameter
-            let access;
-
-            // Check the value of the variable
-            if (variable === '1') {
-                access = true;
-            } else if (variable === '2') {
-                access = false;
-            } else {
-                access = 'undefined';
-            }
+            // Set access to true unconditionally
+            let access = true;
 
             // Display the result
             document.getElementById('result').textContent = `Access: ${access}`;
